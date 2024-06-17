@@ -1,6 +1,6 @@
 const sumAll = function(a, b) {
 
-    let numberMin = Math.min(a, b)
+    let numberMin = Math.min(a, b);
     let numberMax = Math.max(a, b);
     let totalSum = 0;
 
@@ -12,7 +12,7 @@ const sumAll = function(a, b) {
         totalSum += numberMin;
         numberMin++;
     } while (numberMin <= numberMax);
-    
+
     return totalSum;
 };
 
