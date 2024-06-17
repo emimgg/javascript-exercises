@@ -1,15 +1,18 @@
-const sumAll = function(min, max) {
+const sumAll = function(a, b) {
 
-    let numberMin = parseInt(min);
-    let numberMax = parseInt(max);
+    let numberMin = Math.min(a, b)
+    let numberMax = Math.max(a, b);
     let totalSum = 0;
+
+    if (a < 0 || b < 0 || typeof a !== "number" || typeof b !== "number") {
+        return "ERROR";
+    }
 
     do {
         totalSum += numberMin;
         numberMin++;
     } while (numberMin <= numberMax);
-
-    console.log(totalSum);
+    
     return totalSum;
 };
 
