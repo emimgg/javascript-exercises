@@ -1,15 +1,12 @@
 const removeFromArray = function(array, ...args) {
 
-    const itemsToRemove = Array.from(arguments).slice(1);
-    console.log(itemsToRemove);
 
-    for (let item of itemsToRemove) {
-        let index = array.indexOf(item);
-        let remove = array.splice(index, 1);
-    }
+const toRemove = Array.from(arguments).slice(1);
+const newArray = array.filter(function(words) {
+    return !toRemove.includes(words);
+});
+return newArray;
 
-    console.log(array + "array");
-    return array;
 }
 
 // Do not edit below this line
