@@ -1,5 +1,6 @@
 const reverseString = function(word) {
-    
+    if (word === "") return "";
+
     let reversedString = "";
 
     let i = 1;
